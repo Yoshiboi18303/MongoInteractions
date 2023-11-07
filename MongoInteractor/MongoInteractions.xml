@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MongoInteractions</name>
+    </assembly>
+    <members>
+        <member name="T:MongoInteractor.Exceptions.NotReadyException">
+            <summary>
+            Something was not ready.
+            </summary>
+        </member>
+        <member name="T:MongoInteractions.MongoCollectionInteractor`1">
+            <summary>
+            Represents an interactor for interacting with a collection in a database
+            </summary>
+            <typeparam name="TDocument">A type that represents what the data in the collection looks like</typeparam>
+        </member>
+        <member name="P:MongoInteractions.MongoCollectionInteractor`1.Client">
+            <summary>
+            Gets the base <see cref="T:MongoDB.Driver.MongoClient" /> for this <see cref="T:MongoInteractions.MongoCollectionInteractor`1"/>
+            </summary>
+        </member>
+        <member name="P:MongoInteractions.MongoCollectionInteractor`1.Collection">
+            <summary>
+            Gets the <see cref="T:MongoDB.Driver.IMongoCollection`1"/> that this <see cref="T:MongoInteractions.MongoCollectionInteractor`1"/> interacts with.
+            </summary>
+        </member>
+        <member name="P:MongoInteractions.MongoCollectionInteractor`1.Database">
+            <summary>
+            Gets the parent <see cref="T:MongoInteractions.MongoDatabaseInteractor"/> this <see cref="T:MongoInteractions.MongoCollectionInteractor`1"/> is in.
+            </summary>
+        </member>
+        <member name="P:MongoInteractions.MongoCollectionInteractor`1.Mongo">
+            <summary>
+            Gets the base <see cref="T:MongoInteractions.MongoInteractor"/> this <see cref="T:MongoInteractions.MongoCollectionInteractor`1"/> uses.
+            </summary>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.Find(MongoDB.Driver.FilterDefinition{`0},MongoDB.Driver.FindOptions)">
+            <summary>
+            Finds all documents that match a filter, then returns an <see cref="T:MongoDB.Driver.IFindFluent`2"/>
+            </summary>
+            <param name="filter">The <see cref="T:MongoDB.Driver.FilterDefinition`1"/> to use</param>
+            <param name="options">The options to use for this find operation</param>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.Find(MongoDB.Driver.FindOptions)">
+            <summary>
+            Gets all documents in the collection and returns a List with all entries.
+            </summary>
+            <param name="options">The options to use for this find operation</param>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.FindAsync(MongoDB.Driver.FilterDefinition{`0},MongoDB.Driver.FindOptions{`0,`0})">
+            <summary>
+            Asynchronously finds all documents that match a filter, then returns an <see cref="T:MongoDB.Driver.IAsyncCursor`1"/>
+            </summary>
+            <param name="filter">The <see cref="T:MongoDB.Driver.FilterDefinition`1"/> to use</param>
+            <param name="options">The options to use for this find operation</param>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.FindAsync(MongoDB.Driver.FindOptions{`0,`0})">
+            <summary>
+            Asynchronously gets all documents in the collection and returns a List with all entries.
+            </summary>
+            <param name="options">The options to use for this find operation</param>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.FindOne(MongoDB.Driver.FilterDefinition{`0},MongoDB.Driver.FindOptions)">
+            <summary>
+            Finds one document from the collection.
+            </summary>
+            <param name="filter">The <see cref="T:MongoDB.Driver.FilterDefinition`1"/> to use</param>
+            <param name="options">The options to use for this find operation</param>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.FindOneAsync(MongoDB.Driver.FilterDefinition{`0},MongoDB.Driver.FindOptions{`0,`0})">
+            <summary>
+            Asynchronously finds one document from the collection.
+            </summary>
+            <param name="filter">The <see cref="T:MongoDB.Driver.FilterDefinition`1"/> to use</param>
+            <param name="options">The options to use for this find operation</param>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.FindOneAndUpdate(MongoDB.Driver.FilterDefinition{`0},MongoDB.Driver.UpdateDefinition{`0},MongoDB.Driver.FindOneAndUpdateOptions{`0,`0})">
+            <summary>
+            Finds a document from the provided filter and updates it with the provided update definition
+            </summary>
+            <param name="filter">The filter to use</param>
+            <param name="update">The update definition to use</param>
+            <param name="options">The options to use</param>
+            <returns>The updated document</returns>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.FindOneAndUpdateAsync(MongoDB.Driver.FilterDefinition{`0},MongoDB.Driver.UpdateDefinition{`0},MongoDB.Driver.FindOneAndUpdateOptions{`0,`0})">
+            <summary>
+            Asynchronously finds a document from the provided filter and updates it with the provided update definition
+            </summary>
+            <param name="filter">The filter to use</param>
+            <param name="update">The update definition to use</param>
+            <param name="options">The options to use</param>
+            <returns>A Task with the updated document</returns>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.FindOneAndDelete(MongoDB.Driver.FilterDefinition{`0},MongoDB.Driver.FindOneAndDeleteOptions{`0,`0})">
+            <summary>
+            Finds a document from the provided filter and deletes it.
+            </summary>
+            <param name="filter">The filter to use</param>
+            <param name="options">The options to use</param>
+            <returns>The deleted document</returns>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.FindOneAndDeleteAsync(MongoDB.Driver.FilterDefinition{`0},MongoDB.Driver.FindOneAndDeleteOptions{`0,`0})">
+            <summary>
+            Asynchronously finds a document with the provided filter and deletes it.
+            </summary>
+            <param name="filter">The filter to use</param>
+            <param name="options">The options to use</param>
+            <returns>A Task with the deleted document</returns>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.FindOneAndReplace(MongoDB.Driver.FilterDefinition{`0},`0,MongoDB.Driver.FindOneAndReplaceOptions{`0,`0})">
+            <summary>
+            Finds a document with the provided filter and replaces it with the provided replacement.
+            </summary>
+            <param name="filter">The filter to use</param>
+            <param name="replacement">The brand new document to replace the current document with</param>
+            <param name="options">The options to use</param>
+            <returns>The replaced document</returns>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.FindOneAndReplaceAsync(MongoDB.Driver.FilterDefinition{`0},`0,MongoDB.Driver.FindOneAndReplaceOptions{`0,`0})">
+            <summary>
+            Asynchronously finds a document with the provided filter and replaces it with the provided replacement.
+            </summary>
+            <param name="filter">The filter to use</param>
+            <param name="replacement">The brand new document to replace the current document with</param>
+            <param name="options">The options to use</param>
+            <returns>A Task with the replaced document</returns>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.InsertMany(System.Collections.Generic.IEnumerable{`0},MongoDB.Driver.InsertManyOptions)">
+            <summary>
+            Inserts many documents into the collection
+            </summary>
+            <param name="documents">An <see cref="T:System.Collections.Generic.IEnumerable`1"/> with all the documents to insert</param>
+            <param name="options">The options to use</param>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.InsertManyAsync(System.Collections.Generic.IEnumerable{`0},MongoDB.Driver.InsertManyOptions)">
+            <summary>
+            Asynchronously inserts many documents into the collection
+            </summary>
+            <param name="documents">An <see cref="T:System.Collections.Generic.IEnumerable`1"/> with all the documents to insert</param>
+            <param name="options">The options to use</param>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.InsertOne(`0,MongoDB.Driver.InsertOneOptions)">
+            <summary>
+            Inserts one document into the collection
+            </summary>
+            <param name="document">The document to insert</param>
+            <param name="options">The options to use</param>
+        </member>
+        <member name="M:MongoInteractions.MongoCollectionInteractor`1.InsertOneAsync(`0,MongoDB.Driver.InsertOneOptions)">
+            <summary>
+            Asynchronously inserts one document into the collection
+            </summary>
+            <param name="document">The document to insert</param>
+            <param name="options">The options to use</param>
+        </member>
+        <member name="T:MongoInteractions.MongoDatabaseInteractor">
+            <summary>
+            Represents an interactor that interacts with a database in a cluster.
+            </summary>
+        </member>
+        <member name="P:MongoInteractions.MongoDatabaseInteractor.Client">
+            <summary>
+            Gets the <see cref="T:MongoDB.Driver.MongoClient"/> this <see cref="T:MongoInteractions.MongoDatabaseInteractor"/> uses.
+            </summary>
+        </member>
+        <member name="P:MongoInteractions.MongoDatabaseInteractor.Database">
+            <summary>
+            Gets the <see cref="T:MongoDB.Driver.IMongoDatabase"/> this <see cref="T:MongoInteractions.MongoDatabaseInteractor"/> interacts with.
+            </summary>
+        </member>
+        <member name="P:MongoInteractions.MongoDatabaseInteractor.Mongo">
+            <summary>
+            Gets the <see cref="T:MongoInteractions.MongoInteractor"/> this <see cref="T:MongoInteractions.MongoDatabaseInteractor"/> is associated with.
+            </summary>
+        </member>
+        <member name="M:MongoInteractions.MongoDatabaseInteractor.CreateCollection(System.String,MongoDB.Driver.CreateCollectionOptions)">
+            <summary>
+            Creates a new collection with the provided name and options.
+            </summary>
+            <param name="collectionName">The name for the collection</param>
+            <param name="options">The options to use</param>
+        </member>
+        <member name="M:MongoInteractions.MongoDatabaseInteractor.CreateCollectionAsync(System.String,MongoDB.Driver.CreateCollectionOptions)">
+            <summary>
+            Asynchronously creates a new collection with the provided name and options
+            </summary>
+            <param name="collectionName">The name for the collection</param>
+            <param name="options">The options to use</param>
+        </member>
+        <member name="M:MongoInteractions.MongoDatabaseInteractor.DropCollection(System.String)">
+            <summary>
+            Drops (deletes) a collection, deleting all entries.
+            </summary>
+            <param name="collectionName">The name of the collection</param>
+            <remarks>THIS CANNOT BE UNDONE ONCE EXECUTED, BE CAREFUL!</remarks>
+        </member>
+        <member name="M:MongoInteractions.MongoDatabaseInteractor.DropCollectionAsync(System.String)">
+            <summary>
+            Asynchronously drops (deletes) a collection, deleting all entries.
+            </summary>
+            <param name="collectionName">The name of the collection</param>
+            <remarks>THIS CANNOT BE UNDONE ONCE EXECUTED, BE CAREFUL!</remarks>
+        </member>
+        <member name="M:MongoInteractions.MongoDatabaseInteractor.GetCollection``1(System.String,MongoDB.Driver.MongoCollectionSettings)">
+            <summary>
+            Gets a collection from the provided name, then returns a new <see cref="T:MongoInteractions.MongoCollectionInteractor`1"/>.
+            </summary>
+            <typeparam name="TDocument">A type that represents what the data in the collection looks like.</typeparam>
+            <param name="collectionName">The name of the collection.</param>
+            <param name="settings">The settings.</param>
+            <returns>A <see cref="T:MongoInteractions.MongoCollectionInteractor`1"/> to allow for interactions with the collection.</returns>
+        </member>
+        <member name="T:MongoInteractions.MongoInteractor">
+            <summary>
+            Represents an interactor to interact with a MongoDB cluster.
+            </summary>
+        </member>
+        <member name="P:MongoInteractions.MongoInteractor.Client">
+            <summary>
+            Gets the <see cref="T:MongoDB.Driver.MongoClient"/> this <see cref="T:MongoInteractions.MongoInteractor"/> uses.
+            </summary>
+        </member>
+        <member name="P:MongoInteractions.MongoInteractor.IsReady">
+            <summary>
+            Gets whether this <see cref="T:MongoInteractions.MongoInteractor"/> is ready or not.
+            </summary>
+        </member>
+        <member name="M:MongoInteractions.MongoInteractor.#ctor">
+            <summary>
+            Initializes a new <see cref="T:MongoInteractions.MongoInteractor"/>.
+            </summary>
+        </member>
+        <member name="M:MongoInteractions.MongoInteractor.#ctor(MongoDB.Driver.MongoClientSettings)">
+            <summary>
+            Initializes a new <see cref="T:MongoInteractions.MongoInteractor"/> with the provided <see cref="T:MongoDB.Driver.MongoClientSettings" />
+            </summary>
+            <param name="settings">The settings to use</param>
+        </member>
+        <member name="M:MongoInteractions.MongoInteractor.#ctor(MongoDB.Driver.MongoUrl)">
+            <summary>
+            Initializes a new <see cref="T:MongoInteractions.MongoInteractor"/> with the provided <see cref="T:MongoDB.Driver.MongoUrl"/>
+            </summary>
+            <param name="url">The URL to use</param>
+        </member>
+        <member name="M:MongoInteractions.MongoInteractor.#ctor(System.String)">
+            <summary>
+            Initializes a new <see cref="T:MongoInteractions.MongoInteractor"/> with the provided connection string.
+            </summary>
+            <param name="connectionString">The connection string to use.</param>
+        </member>
+        <member name="M:MongoInteractions.MongoInteractor.Start">
+            <summary>
+            Starts the <see cref="T:MongoInteractions.MongoInteractor"/> which is required before any interactions.
+            </summary>
+            <exception cref="T:System.Exception">Throws if the client has already started</exception>
+        </member>
+        <member name="M:MongoInteractions.MongoInteractor.StartAsync">
+            <summary>
+            Asynchronously starts the <see cref="T:MongoInteractions.MongoInteractor"/> which is required before any interactions.
+            </summary>
+            <exception cref="T:System.Exception">Throws if the client has already started</exception>
+        </member>
+        <member name="M:MongoInteractions.MongoInteractor.GetDatabase(System.String,MongoDB.Driver.MongoDatabaseSettings)">
+            <summary>
+            Gets a database from your MongoDB cluster from the provided database name then returns a <see cref="T:MongoInteractions.MongoDatabaseInteractor"/>.
+            </summary>
+            <param name="databaseName">The database name to get.</param>
+            <param name="settings">The <see cref="T:MongoDB.Driver.MongoDatabaseSettings"/> to use.</param>
+            <returns>A <see cref="T:MongoInteractions.MongoDatabaseInteractor"/> to provide interaction methods for your database.</returns>
+            <exception cref="T:MongoInteractor.Exceptions.NotReadyException" />
+        </member>
+        <member name="M:MongoInteractions.MongoInteractor.DropDatabase(System.String)">
+            <summary>
+            Drops (deletes) a database from your cluster.
+            </summary>
+            <param name="databaseName">The database name to delete.</param>
+            <exception cref="T:MongoInteractor.Exceptions.NotReadyException" />
+        </member>
+        <member name="M:MongoInteractions.MongoInteractor.DropDatabaseAsync(System.String)">
+            <summary>
+            Asynchronously drops (deletes) a database from your cluster.
+            </summary>
+            <param name="databaseName">The database name to delete.</param>
+            <exception cref="T:MongoInteractor.Exceptions.NotReadyException" />
+        </member>
+    </members>
+</doc>

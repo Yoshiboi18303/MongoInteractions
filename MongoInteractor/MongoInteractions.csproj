@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <!-- Assembly/.NET configuration PropertyGroup -->
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<AssemblyName>MongoInteractions</AssemblyName>
+  </PropertyGroup>
+
+  <!-- Package information PropertyGroup -->
+  <PropertyGroup>
+	  <PackageId>MongoInteractions</PackageId>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageReleaseNotes><![CDATA[
+		Initial Release
+	  ]]]></PackageReleaseNotes>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <DocumentationFile>MongoInteractions.xml</DocumentationFile>
+	  <Copyright><![CDATA[
+		Copyright © 2023 Yoshiboi18303
+	  ]]]></Copyright>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+	
+  <!-- Dependencies -->
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.22.0" />
+  </ItemGroup>
+  
+  <!-- Files to include -->
+  <ItemGroup>
+	  <None Include="README.md" Pack="true" PackagePath="\" />
+	  <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+</Project>
