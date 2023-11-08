@@ -361,3 +361,12 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# .env files, with sensitive info.
+**/.env
+
+# Ignore any example .env Files
+!**/.env.example
+
+# Will be committed later
+CONTRIBUTING.md

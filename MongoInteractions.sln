@@ -8,9 +8,18 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2CC2B867-BC80-4A2D-8247-C58565EF1CE1}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{9398317B-77CA-41F5-8C3A-0114A4749416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoInteractions.Tests", "MongoInteractor.Tests\MongoInteractions.Tests.csproj", "{484FBDBC-287D-462C-9FD6-9E6B5D600140}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.Net6", "TestProject.Net6\TestProject.Net6.csproj", "{B0DDFFD7-BAC5-4DCA-8EF5-925BDA2CE671}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.Net7", "TestProject.Net7\TestProject.Net7.csproj", "{B18AF0D2-7969-4CF7-94CF-45152D19C2A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +31,18 @@ Global
 		{8EC29AFC-5B4F-4C25-AF88-8BC25A2905E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EC29AFC-5B4F-4C25-AF88-8BC25A2905E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EC29AFC-5B4F-4C25-AF88-8BC25A2905E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9398317B-77CA-41F5-8C3A-0114A4749416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9398317B-77CA-41F5-8C3A-0114A4749416}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9398317B-77CA-41F5-8C3A-0114A4749416}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9398317B-77CA-41F5-8C3A-0114A4749416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{484FBDBC-287D-462C-9FD6-9E6B5D600140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{484FBDBC-287D-462C-9FD6-9E6B5D600140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{484FBDBC-287D-462C-9FD6-9E6B5D600140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{484FBDBC-287D-462C-9FD6-9E6B5D600140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0DDFFD7-BAC5-4DCA-8EF5-925BDA2CE671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0DDFFD7-BAC5-4DCA-8EF5-925BDA2CE671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0DDFFD7-BAC5-4DCA-8EF5-925BDA2CE671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0DDFFD7-BAC5-4DCA-8EF5-925BDA2CE671}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B18AF0D2-7969-4CF7-94CF-45152D19C2A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18AF0D2-7969-4CF7-94CF-45152D19C2A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18AF0D2-7969-4CF7-94CF-45152D19C2A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18AF0D2-7969-4CF7-94CF-45152D19C2A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

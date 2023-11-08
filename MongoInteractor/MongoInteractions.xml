@@ -4,7 +4,7 @@
         <name>MongoInteractions</name>
     </assembly>
     <members>
-        <member name="T:MongoInteractor.Exceptions.NotReadyException">
+        <member name="T:MongoInteractions.Exceptions.NotReadyException">
             <summary>
             Something was not ready.
             </summary>
@@ -269,21 +269,21 @@
             <param name="databaseName">The database name to get.</param>
             <param name="settings">The <see cref="T:MongoDB.Driver.MongoDatabaseSettings"/> to use.</param>
             <returns>A <see cref="T:MongoInteractions.MongoDatabaseInteractor"/> to provide interaction methods for your database.</returns>
-            <exception cref="T:MongoInteractor.Exceptions.NotReadyException" />
+            <exception cref="T:MongoInteractions.Exceptions.NotReadyException" />
         </member>
         <member name="M:MongoInteractions.MongoInteractor.DropDatabase(System.String)">
             <summary>
             Drops (deletes) a database from your cluster.
             </summary>
             <param name="databaseName">The database name to delete.</param>
-            <exception cref="T:MongoInteractor.Exceptions.NotReadyException" />
+            <exception cref="T:MongoInteractions.Exceptions.NotReadyException" />
         </member>
         <member name="M:MongoInteractions.MongoInteractor.DropDatabaseAsync(System.String)">
             <summary>
             Asynchronously drops (deletes) a database from your cluster.
             </summary>
             <param name="databaseName">The database name to delete.</param>
-            <exception cref="T:MongoInteractor.Exceptions.NotReadyException" />
+            <exception cref="T:MongoInteractions.Exceptions.NotReadyException" />
         </member>
     </members>
 </doc>

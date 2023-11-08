@@ -1,58 +1,9 @@
-# MongoInteractions
-
-The easiest way to work with a MongoDB cluster.
-
-## Table of Contents
-
-<!--TOC-->
-  - [Package Support](#package-support)
-  - [Installation](#installation)
-    - [Package Manager Console (Visual Studio)](#package-manager-console-visual-studio)
-    - [.NET CLI](#.net-cli)
-  - [Usage](#usage)
-    - [Note](#note)
-<!--/TOC-->
-
-## Package Support
-
-| Framework | Is Supported? | Extra Info |
-| --------- | ------------- | ---------- |
-| **.NET 6**    | :ballot_box_with_check: |
-| **.NET 7**    | :ballot_box_with_check: |
-| **.NET Framework** | :x: | May never be supported due to storage limitations on this laptop. |
-| **.NET Core** | :x: | May never be supported due to storage limitations on this laptop. |
-| **Mono**      | :x: | Not supported yet, but **Mono** support is planned. |
-| **Unity**     | :x: | Will **NEVER** be supported, along with other C# game engines. |
-
-## Installation
-
-### Package Manager Console (Visual Studio)
-
-```powershell
-Install-Package MongoInteractions
-```
-
-### .NET CLI
-
-```bash
-dotnet add package MongoInteractions
-```
-
-## Usage
-
-**This example uses .NET 7, but this package supports .NET 6 as well.**
-
-### Note
-
-This example uses a `.env` file which is recommended if your MongoDB project has the `0.0.0.0/0` IP set in the **Network Access** page.
-
-```csharp
-using DotNetEnv;
-using MongoDB.Driver;
+﻿using DotNetEnv;
 using MongoInteractions;
-using TestProject.Net7.Models;
+using MongoDB.Driver;
+using TestProject.Net6.Models;
 
-namespace TestProject.Net7
+namespace TestProject.Net6
 {
     public class Program
     {
@@ -126,8 +77,3 @@ namespace TestProject.Net7
         }
     }
 }
-```
-
----
-
-**Ready to use this package? I'm sure you'll love it!**

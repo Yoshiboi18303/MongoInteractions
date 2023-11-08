@@ -1,5 +1,5 @@
 ﻿using MongoDB.Driver;
-using MongoInteractor.Exceptions;
+using MongoInteractions.Exceptions;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;

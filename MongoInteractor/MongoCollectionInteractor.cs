@@ -51,7 +51,7 @@ namespace MongoInteractions
         /// <param name="options">The options to use for this find operation</param>
         public List<TDocument> Find(FindOptions? options = null)
         {
-            var found = Collection.Find(null, options);
+            var found = Collection.Find(new FilterDefinitionBuilder<TDocument>().Empty, options);
             return found.ToList();
         }
 
